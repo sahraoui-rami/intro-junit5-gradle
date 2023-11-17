@@ -12,5 +12,14 @@ repositories {
 }
 
 dependencies {
+    testCompile('org.junit.jupiter:junit-jupiter-api:5.8.2')
+    testCompile('org.junit.jupiter:junit-jupiter-engine:5.8.2')
+}
 
+test {
+    useJUnitPlatform()
+    testLogging {
+        showStandardStreams true
+        events "passed", "skipped", "failed"
+    }
 }
